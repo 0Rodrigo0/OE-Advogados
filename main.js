@@ -34,6 +34,12 @@ const swiper = new Swiper(".swiper", {
   },
   mousewhell: true,
   keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true,
+    },
+  },
 });
 
 /* ScrolReview - mostra itemns ao rolar a pagina */
@@ -64,6 +70,10 @@ function backToTop() {
     backToTopButton.classList.remove("show");
   }
 }
+
+/* Mrcação do menu de acordo com o local da pagina*/
+const sections = document.querySelectionAll("selection[id]");
+function activateMenuAtCurrentSection() {}
 
 /* When Scroll */
 window.addEventListener("scroll", function () {
