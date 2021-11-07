@@ -23,7 +23,7 @@ img {
 :root {
   --header-height: 4.5rem;
   /* colors */
-  --hue: 150;
+  --hue: 190;
   /* HSL color mode */
   --base-color: hsl(var(--hue) 36% 57%);
   --base-color-second: hsl(var(--hue) 65% 88%);
@@ -332,12 +332,13 @@ nav.show div.icon-close {
   background: var(--base-color);
   position: absolute;
   top: -8.3%;
-  left: -33%;
+  left: -9%;
   z-index: 0;
 }
 
 #about .image img {
   position: relative;
+  left: 2.93rem;
 }
 
 #about .image img,
@@ -348,6 +349,11 @@ nav.show div.icon-close {
 #about .text {
   margin-right: 1.5rem;
   margin-left: 1.5rem;
+  text-align: center;
+}
+
+#about .text strong {
+  color: var(--base-color);
 }
 
 /******* Services **********/
@@ -593,8 +599,18 @@ footer .social a:hover {
 
   /* about */
   #about .container {
-    margin: 0 auto;
     grid-auto-flow: column;
+    margin: 0 auto;
+  }
+
+  #about .text {
+    text-align: left;
+    margin-left: 4rem;
+  }
+
+  #about .image::before {
+    top: -15%;
+    left: 5%;
   }
 
   /* services */
