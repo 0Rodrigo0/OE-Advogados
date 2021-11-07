@@ -15,8 +15,7 @@ for (const link of links) {
   });
 }
 
-/* mudar header no scroll*/
-
+/* mudar header no scroll */
 function changeHeaderWhenScroll() {
   const header = document.querySelector("#header");
   const navHeight = header.offsetHeight;
