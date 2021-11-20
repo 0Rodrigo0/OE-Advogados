@@ -632,9 +632,7 @@ footer .social a:hover {
     padding-left: 3rem;
     padding-right: 3rem;
   }
-  .card .title {
-    font-size: var(--title-font-size2);
-  }
+
   /* Testimonials */
   #testimonials .container {
     margin-left: auto;
@@ -767,9 +765,6 @@ footer .social a:hover {
   .card {
     padding-left: 3rem;
     padding-right: 3rem;
-  }
-  .card .title {
-    font-size: var(--title-font-size);
   }
 
   /* Testimonials */
