@@ -22,6 +22,7 @@ img {
 
 :root {
   --header-height: 4.5rem;
+  --header-height2: 1rem;
   /* colors */
   --hue: 190;
   /* HSL color mode */
@@ -34,7 +35,9 @@ img {
   --body-color: hsl(0 0% 98%);
   /* fonts */
   --title-font-size: 1.185rem;
+  --title-font-size2: 2rem;
   --subtitle-font-size: 1rem;
+  --subtitle-font-size2: 0.9rem;
   --title-font: "Poppins", sans-serif;
   --body-font: "Roboto", sans-serif;
 }
@@ -534,6 +537,139 @@ footer .social a:hover {
 }
 
 /******* RESPONSIVO **********/
+
+/* large devices: +1023 */
+
+@media (min-width: 1023px) {
+  .container {
+    max-width: 1023px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section {
+    padding: 7rem 0;
+  }
+  .section header {
+    max-width: 25rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .button {
+    height: 2.5rem;
+  }
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
+  nav .menu ul li a.title.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
+  }
+  nav .icon-menu {
+    display: none;
+  }
+
+  /*  layout */
+  main {
+    margin-top: var(--header-height);
+  }
+  /* home */
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  #home .image {
+    order: 1;
+  }
+  #home .text {
+    order: 0;
+    max-width: 20rem;
+    text-align: left;
+    font-size: var(--subtitle-font-size2);
+  }
+  #home .text .title {
+    font-size: var(--title-font-size2);
+  }
+  /* about */
+  #about .container {
+    grid-auto-flow: column;
+    margin: auto;
+  }
+  #about .text {
+    text-align: left;
+    margin-left: 4rem;
+    font-size: var(--subtitle-font-size2);
+  }
+  #about .text .title {
+    font-size: var(--title-font-size2);
+  }
+  #about .image::before {
+    top: -15%;
+    left: 5%;
+  }
+  /* services */
+  #services .title {
+    font-size: var(--title-font-size2);
+  }
+  #services .title .subtitle {
+    font-size: var(--subtitle-font-size2);
+  }
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .card .title {
+    font-size: var(--title-font-size2);
+  }
+  /* Testimonials */
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #testimonials .title {
+    font-size: var(--title-font-size2);
+  }
+  /* Contact */
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+  #contact .text {
+    max-width: 25rem;
+  }
+  #contact .text .title {
+    font-size: var(--title-font-size2);
+  }
+  #contact .button {
+    height: 2.5rem;
+  }
+  /* Footer */
+  footer.section {
+    padding: 3rem 0;
+  }
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .logo {
+    font-size: 2rem;
+  }
+}
 /* extra large devices: +1200 */
 @media (min-width: 1200px) {
   .container {
@@ -566,12 +702,10 @@ footer .social a:hover {
     font: 400 1rem var(--body-font);
     -webkit-font-smoothing: antialiased;
   }
-
   nav .menu ul li a.title.active {
     font-weight: bold;
     -webkit-font-smoothing: auto;
   }
-
   nav .icon-menu {
     display: none;
   }
@@ -594,6 +728,10 @@ footer .social a:hover {
     order: 0;
     max-width: 24rem;
     text-align: left;
+    font-size: var(--subtitle-font-size);
+  }
+  #home .text .title {
+    font-size: var(--title-font-size);
   }
 
   /* about */
@@ -605,6 +743,10 @@ footer .social a:hover {
   #about .text {
     text-align: left;
     margin-left: 4rem;
+    font-size: var(--subtitle-font-size);
+  }
+  #about .text .title {
+    font-size: var(--title-font-size);
   }
 
   #about .image::before {
@@ -613,6 +755,12 @@ footer .social a:hover {
   }
 
   /* services */
+  #services .title {
+    font-size: var(--title-font-size);
+  }
+  #services .title .subtitle {
+    font-size: var(--subtitle-font-size);
+  }
   .cards {
     grid-template-columns: 1fr 1fr;
   }
@@ -620,11 +768,17 @@ footer .social a:hover {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+  .card .title {
+    font-size: var(--title-font-size);
+  }
 
   /* Testimonials */
   #testimonials .container {
     margin-left: auto;
     margin-right: auto;
+  }
+  #testimonials .title {
+    font-size: var(--title-font-size);
   }
 
   /* Contact */
@@ -634,6 +788,12 @@ footer .social a:hover {
   }
   #contact .text {
     max-width: 25rem;
+  }
+  #contact .text .title {
+    font-size: var(--title-font-size);
+  }
+  #contact .button {
+    height: 3.5rem;
   }
 
   /* Footer */
@@ -650,7 +810,6 @@ footer .social a:hover {
   }
 }
 
-/* large devices: +1023 */
 /* large devices: +992 */
 @media (min-width: 992px) {
   :root {
