@@ -537,9 +537,16 @@ footer .social a:hover {
 }
 
 /******* RESPONSIVO **********/
+/* large devices: +767 */
+/* large devices: +992 */
+@media (min-width: 992px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+}
 
 /* large devices: +1023 */
-
 @media (min-width: 1023px) {
   .container {
     max-width: 1023px;
@@ -804,13 +811,3 @@ footer .social a:hover {
     font-size: 2.25rem;
   }
 }
-
-/* large devices: +992 */
-@media (min-width: 992px) {
-  :root {
-    --title-font-size: 2.25rem;
-    --subtitle-font-size: 1.125rem;
-  }
-}
-
-/* large devices: +767 */
