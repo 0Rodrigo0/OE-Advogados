@@ -22,7 +22,7 @@ img {
 
 :root {
   --header-height: 4.5rem;
-  --header-height2: 1rem;
+  --header-height2: 3rem;
   /* colors */
   --hue: 190;
   /* HSL color mode */
@@ -34,10 +34,12 @@ img {
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
   /* fonts */
-  --title-font-size: 1.185rem;
-  --title-font-size2: 2rem;
+  --title-font-size: 2rem;
+  --title-font-size2: 1.6rem;
+  --title-font-size3: 1.3rem;
   --subtitle-font-size: 1rem;
   --subtitle-font-size2: 0.9rem;
+  --subtitle-font-size3: 0.8rem;
   --title-font: "Poppins", sans-serif;
   --body-font: "Roboto", sans-serif;
 }
@@ -538,18 +540,9 @@ footer .social a:hover {
 
 /******* RESPONSIVO **********/
 /* large devices: +767 */
-/* large devices: +992 */
-@media (min-width: 992px) {
-  :root {
-    --title-font-size: 2.25rem;
-    --subtitle-font-size: 1.125rem;
-  }
-}
-
-/* large devices: +1023 */
-@media (min-width: 1023px) {
+@media (min-width: 767px) {
   .container {
-    max-width: 1023px;
+    max-width: 720px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -557,13 +550,14 @@ footer .social a:hover {
     padding: 7rem 0;
   }
   .section header {
-    max-width: 25rem;
+    max-width: 32rem;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    padding: 2rem 0;
   }
   .button {
-    height: 2.5rem;
+    height: 2rem;
   }
   nav .menu {
     opacity: 1;
@@ -572,7 +566,7 @@ footer .social a:hover {
   }
   nav .menu ul {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
   }
   nav .menu ul li a.title {
     font: 400 1rem var(--body-font);
@@ -585,7 +579,6 @@ footer .social a:hover {
   nav .icon-menu {
     display: none;
   }
-
   /*  layout */
   main {
     margin-top: var(--header-height);
@@ -601,7 +594,137 @@ footer .social a:hover {
   }
   #home .text {
     order: 0;
+    max-width: 18rem;
+    text-align: left;
+    font-size: var(--subtitle-font-size3);
+  }
+  #home .text .title {
+    font-size: var(--title-font-size3);
+  }
+  /* about */
+  #about .container {
+    grid-auto-flow: column;
+    margin: auto;
+  }
+  #about .text {
+    text-align: left;
+    margin-left: 1rem;
+    font-size: var(--subtitle-font-size3);
+  }
+  #about .text .title {
+    font-size: var(--title-font-size3);
+  }
+  #about .image::before {
+    height: 80%;
+    width: 100%;
+    top: -19%;
+    left: 5%;
+  }
+  /* services */
+  #services .title {
+    font-size: var(--title-font-size3);
+  }
+  #services .title .subtitle {
+    font-size: var(--subtitle-font-size3);
+  }
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  /* Testimonials */
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #testimonials .title {
+    font-size: var(--title-font-size2);
+  }
+  /* Contact */
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+  #contact .text {
     max-width: 20rem;
+  }
+  #contact .text .title {
+    font-size: var(--title-font-size3);
+  }
+  #contact .button {
+    height: 2rem;
+  }
+  /* Footer */
+  footer.section {
+    padding: 2rem 0;
+  }
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .logo {
+    font-size: 1.8rem;
+  }
+}
+
+/* large devices: +992 */
+@media (min-width: 992px) {
+  .container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section {
+    padding: 7rem 0;
+  }
+  .section header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .button {
+    height: 2rem;
+  }
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+  nav .menu ul {
+    display: flex;
+    gap: 1rem;
+  }
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
+  nav .menu ul li a.title.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
+  }
+  nav .icon-menu {
+    display: none;
+  }
+  /*  layout */
+  main {
+    margin-top: var(--header-height);
+  }
+  /* home */
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  #home .image {
+    order: 1;
+  }
+  #home .text {
+    order: 0;
+    max-width: 18rem;
     text-align: left;
     font-size: var(--subtitle-font-size2);
   }
@@ -615,13 +738,15 @@ footer .social a:hover {
   }
   #about .text {
     text-align: left;
-    margin-left: 4rem;
+    margin-left: 2rem;
     font-size: var(--subtitle-font-size2);
   }
   #about .text .title {
     font-size: var(--title-font-size2);
   }
   #about .image::before {
+    height: 90%;
+    width: 100%;
     top: -15%;
     left: 5%;
   }
@@ -639,7 +764,6 @@ footer .social a:hover {
     padding-left: 3rem;
     padding-right: 3rem;
   }
-
   /* Testimonials */
   #testimonials .container {
     margin-left: auto;
@@ -654,17 +778,17 @@ footer .social a:hover {
     align-items: center;
   }
   #contact .text {
-    max-width: 25rem;
+    max-width: 20rem;
   }
   #contact .text .title {
     font-size: var(--title-font-size2);
   }
   #contact .button {
-    height: 2.5rem;
+    height: 2rem;
   }
   /* Footer */
   footer.section {
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
   footer .container {
     grid-auto-flow: column;
@@ -672,9 +796,10 @@ footer .social a:hover {
     justify-content: space-between;
   }
   footer .logo {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
+
 /* extra large devices: +1200 */
 @media (min-width: 1200px) {
   .container {
@@ -683,7 +808,7 @@ footer .social a:hover {
     margin-right: auto;
   }
   .section {
-    padding: 10rem 0;
+    padding: 7rem 0;
   }
   .section header {
     max-width: 32rem;
