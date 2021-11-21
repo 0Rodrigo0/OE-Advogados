@@ -6,9 +6,11 @@ Você pode acessar o site no link: https://0rodrigo0.github.io/OS-Advogados/
 
 Contatos:
 
-WhatsApp: 51 984065069
-e-mail: rodrigobl1@yahoo.com.br
-Linkedin: https://www.linkedin.com/in/rodrigo-b-b93295a1/
+WhatsApp: 51 984065069.
+
+E-mail: rodrigobl1@yahoo.com.br.
+
+Linkedin: https://www.linkedin.com/in/rodrigo-b-b93295a1/ .
 
 
 Obrigado! 
